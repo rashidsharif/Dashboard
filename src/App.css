@@ -11,15 +11,15 @@
   --activeItem: #f799a354;
 }
 
-.App {
+ .App {
   /* padding: 0.5rem 3.5rem; */
-  color: var(--black);
+ color: var(--black);
   background: linear-gradient(
     106.37deg,
     #ffe1bc 29.63%,
     #ffcfd1 51.55%,
     #f3c6f1 90.85%
-  );
+  ); 
   height: 100vh;
   display: flex;
   align-items: center;
@@ -36,6 +36,8 @@
   gap: 16px;
   grid-template-columns: 11rem auto 20rem;
   overflow: hidden;
+  scrollbar-width: 2px !important;
+ 
 }
 
 @media screen and (max-width: 1200px) {
