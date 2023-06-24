@@ -8,8 +8,7 @@ import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const [selected, setSelected] = useState(0);
-
-  const [expanded, setExpaned] = useState(true);
+  const [expanded, setExpanded] = useState(true);
 
   const sidebarVariants = {
     true: {
@@ -19,13 +18,13 @@ const Sidebar = () => {
       left: "-60%",
     },
   };
-  
+
   return (
     <>
       <div
         className="bars"
         style={expanded ? { left: "60%" } : { left: "5%" }}
-        onClick={() => setExpaned(!expanded)}
+        onClick={() => setExpanded(!expanded)}
       >
         {expanded ? <UilTimes /> : <UilBars />}
       </div>
@@ -56,10 +55,12 @@ const Sidebar = () => {
               </div>
             );
           })}
-          {/* signoutIcon */}
-          <div className="menuItem">
-            <UilSignOutAlt />
-          </div>
+        </div>
+
+        {/* signoutIcon */}
+        <div className="menuItem">
+          <UilSignOutAlt />
+          <span>Logout</span>
         </div>
       </motion.div>
     </>
